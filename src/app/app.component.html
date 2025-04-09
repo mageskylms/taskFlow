@@ -1,6 +1,17 @@
 <h1>TaskFlow 🧠</h1>
 
 <div class="header">
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="abrirFeedbackDialog()">
+            <mat-icon>feedback</mat-icon>
+            <span>Enviar Feedback</span>
+        </button>
+    </mat-menu>
+
     <mat-button-toggle-group [value]="modoKanban" (change)="alternarModoKanban($event.value)" name="modo"
         aria-label="Modo de visualização" exclusive>
         <mat-button-toggle [value]="false">Lista</mat-button-toggle>
@@ -14,5 +25,5 @@
 </div>
 
 <div *ngIf="modoKanban">
-    <app-task-kanban ></app-task-kanban>
+    <app-task-kanban></app-task-kanban>
 </div>

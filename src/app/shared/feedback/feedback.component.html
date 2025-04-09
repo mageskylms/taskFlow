@@ -1,0 +1,28 @@
+<mat-form-field appearance="fill">
+  <mat-label>Tipo</mat-label>
+  <mat-select [(ngModel)]="tipo">
+    <mat-option value="Erro">Erro</mat-option>
+    <mat-option value="Sugestão">Sugestão</mat-option>
+    <mat-option value="Elogio">Elogio</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="w-100">
+  <mat-label>Mensagem</mat-label>
+  <textarea matInput rows="4" [(ngModel)]="mensagem"></textarea>
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="w-100">
+  <mat-label>Seu nome (opcional)</mat-label>
+  <input matInput [(ngModel)]="nome" />
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="w-100">
+  <mat-label>Email (opcional)</mat-label>
+  <input matInput [(ngModel)]="email" />
+</mat-form-field>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-flat-button color="primary" (click)="enviarFeedback()">Enviar</button>
+</mat-dialog-actions>
