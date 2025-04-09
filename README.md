@@ -1,59 +1,135 @@
-# TaskFlow
+# 🚀 TaskFlow
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+TaskFlow é uma aplicação web desenvolvida em Angular para gerenciamento de tarefas com foco em produtividade e simplicidade. Ideal para quem precisam organizar fluxos de trabalho, acompanhar prioridades e comentar suas tarefas em tempo real.
 
-## Development server
+Essa ferramenta faz parte do HUB de Ferramentas Diárias. [M8Sky](https://magesky.vercel.app)
 
-To start a local development server, run:
+> Projeto criado com [Angular CLI](https://github.com/angular/angular-cli) versão 19.1.5.
+
+---
+
+## 📦 Tecnologias Utilizadas
+
+- Angular 19+
+- TypeScript
+- Angular Material
+- RxJS
+- SCSS/CSS
+
+---
+
+## 🛠️ Como rodar localmente
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/seu-usuario/taskflow.git
+cd taskflow
+npm install
+```
+
+Depois, inicie o servidor de desenvolvimento:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abra o navegador em `http://localhost:4200`. A aplicação recarrega automaticamente ao salvar alterações nos arquivos-fonte.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧱 Estrutura de Projeto
 
 ```bash
-ng generate component component-name
+src/
+├── app/
+│   ├── components/       # Componentes reutilizáveis
+│   ├── pages/            # Páginas e views principais
+│   ├── models/           # Interfaces e tipos (ex: Task)
+│   ├── services/         # Comunicação com backend (em breve)
+│   └── app.module.ts     # Módulo principal
+└── assets/               # Imagens, estilos globais, etc.
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
+
+## ✨ Geração de código com Angular CLI
+
+Quer gerar um novo componente, serviço ou módulo? Use o Angular CLI:
+
+```bash
+ng generate component nome-do-componente
+ng generate service nome-do-servico
+ng generate module nome-do-modulo
+```
+
+Veja a lista completa de esquemas disponíveis com:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+---
 
-To build the project run:
+## 📦 Build para produção
+
+Para compilar e gerar os artefatos otimizados para produção:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+O output será gerado no diretório `dist/`.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🧪 Testes
+
+### Unitários (Karma + Jasmine):
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+### E2E (End-to-End):
 
-For end-to-end (e2e) testing, run:
+> ⚠️ O Angular CLI não inclui mais frameworks E2E por padrão. Você pode configurar o [Cypress](https://www.cypress.io/) ou [Playwright](https://playwright.dev/) conforme sua necessidade.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📌 Funcionalidades atuais
 
-## Additional Resources
+- [x] Cadastro e edição de tarefas
+- [x] Atribuição de prioridades (baixa, média, alta)
+- [x] Comentários em tarefas
+- [x] Organização por tags
+- [ ] Integração com backend (quem sabe mais pra frente?)
+- [ ] Autenticação de usuários (quem sabe mais pra frente?)
+- [ ] Filtro e busca avançada (quem sabe mais pra frente?)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 📚 Recursos adicionais
+
+- [Documentação oficial do Angular](https://angular.dev)
+- [Angular Material](https://material.angular.io/)
+- [RxJS](https://rxjs.dev/)
+
+---
+
+## 💡 Contribuições
+
+Sinta-se à vontade para abrir issues, sugerir melhorias ou mandar aquele PR maroto. Toda ajuda é bem-vinda!
+
+---
+
+## 🧙‍♂️ Autor
+
+Desenvolvido por **Lucas Magesky - [M8Sky](https://magesky.vercel.app) **  
+Você também pode me achar no LinkedIn, GitHub, ou tomando café enquanto debugo.
+
+---
+
+## 🏁 Licença
+
+Este projeto está licenciado sob os termos da **MIT License**.
