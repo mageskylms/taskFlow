@@ -1,0 +1,13 @@
+mat-dialog-container {
+    width: 100vw;
+}
+
+mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios {
+    display: flex;
+    flex-direction: column;
+}

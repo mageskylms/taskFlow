@@ -1,0 +1,36 @@
+<div class="nav">
+  <mat-form-field appearance="fill" class="custom-select">
+    <mat-label>Prioridade</mat-label>
+    <mat-select [(ngModel)]="filtro" name="prioridade">
+      <mat-option value="todas">Todas</mat-option>
+      <mat-option value="baixa">Baixa</mat-option>
+      <mat-option value="média">Média</mat-option>
+      <mat-option value="alta">Alta</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="novaTask()">Nova tarefa</button>
+</div>
+
+<div class="lista-tarefas">
+  <ul>
+    <li *ngFor="let task of filteredTasks" [class.concluida]="task.concluida">
+      <mat-checkbox [(ngModel)]="task.concluida" (change)="concluirTask(task)">
+      </mat-checkbox>
+      <strong (click)="abrirDetalhes(task)">{{ task.nomeTarefa }}</strong>
+      <span (click)="abrirDetalhes(task)"> {{ task.prioridade }}</span>
+      <small *ngIf="task.tags.length" (click)="abrirDetalhes(task)">#{{ task.tags.join(' #') }}</small>
+      <button class="remove-task" (click)="removeTask(task.id)">❌</button>
+    </li>
+  </ul>
+  <button mat-button color="accent" (click)="mostrarConcluidas = !mostrarConcluidas">
+    {{ mostrarConcluidas ? 'Ocultar' : 'Mostrar' }} concluídas {{totalConcluidas}}
+  </button>
+
+  <ul *ngIf="mostrarConcluidas" class="concluidas">
+    <li *ngFor="let task of tasksConcluidas">
+      ✅ <strong (click)="abrirDetalhes(task)">{{ task.nomeTarefa }}</strong>
+      <span (click)="abrirDetalhes(task)"> {{ task.prioridade }}</span>
+      <button (click)="desfazerConclusao(task)">↩️</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,44 @@
+<div class="nav">
+    <mat-form-field appearance="fill" class="custom-select">
+        <mat-label>Prioridade</mat-label>
+        <mat-select [(ngModel)]="filtro" name="prioridade">
+            <mat-option value="todas">Todas</mat-option>
+            <mat-option value="baixa">Baixa</mat-option>
+            <mat-option value="média">Média</mat-option>
+            <mat-option value="alta">Alta</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="novaTask()">Nova tarefa</button>
+</div>
+
+<button class="mostrar-ocultar" mat-button (click)="mostrarConcluidas = !mostrarConcluidas">
+    {{ mostrarConcluidas ? 'Ocultar concluídas' : 'Mostrar concluídas' }}
+</button>
+
+<div class="kanban-board">
+    <div class="kanban-col">
+        <div cdkDropList id="pendentesList" [cdkDropListData]="tarefasPendentes"
+            [cdkDropListConnectedTo]="['concluidasList']" (cdkDropListDropped)="moverTarefa($event)"
+            class="task-container">
+            <h3>Pendentes</h3>
+            <div *ngFor="let task of tarefasPendentes" cdkDrag class="task-card">
+                <strong>{{ task.nomeTarefa }}</strong>
+                <span class="tag">{{ task.prioridade }}</span>
+                <small *ngIf="task.tags.length">#{{ task.tags.join(' #') }}</small>
+                <button (click)="removeTask(task.id)">❌</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="kanban-col" *ngIf="mostrarConcluidas">
+        <div cdkDropList id="concluidasList" [cdkDropListData]="tarefasConcluidas"
+            [cdkDropListConnectedTo]="['pendentesList']" (cdkDropListDropped)="moverTarefa($event)"
+            class="task-container" [style.display]="mostrarConcluidas ? 'block' : 'none'">
+            <h3>Concluídas</h3>
+            <div *ngFor="let task of tarefasConcluidas" cdkDrag class="task-card concluida">
+                <strong>{{ task.nomeTarefa }}</strong>
+                <span class="tag">{{ task.prioridade }}</span>
+            </div>
+        </div>
+    </div>
+</div>

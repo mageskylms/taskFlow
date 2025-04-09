@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>Detalhes da Tarefa</h1>
+
+<mat-dialog-content>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Nome da tarefa</mat-label>
+    <input matInput [(ngModel)]="task.nomeTarefa" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput [(ngModel)]="task.descricao"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Prioridade</mat-label>
+    <mat-select [(ngModel)]="task.prioridade">
+      <mat-option value="baixa">Baixa</mat-option>
+      <mat-option value="média">Média</mat-option>
+      <mat-option value="alta">Alta</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Tags (separadas por vírgula)</mat-label>
+    <input matInput [(ngModel)]="tagsString" />
+  </mat-form-field>
+
+  <div class="comentarios">
+
+    <h3>Comentários</h3>
+
+    <mat-list>
+      @for (comentario of task.comentarios; track comentario) {
+      <mat-list-item>
+        <p matListItemTitle>{{comentario}}</p>
+      </mat-list-item>
+      }
+    </mat-list>
+
+    <mat-form-field>
+      <mat-label>Novo Comentário</mat-label>
+      <input matInput [(ngModel)]="comentario" placeholder="Novo comentário" />
+    </mat-form-field>
+
+    <button mat-button (click)="adicionarComentario()">Comentar</button>
+  </div>
+
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancelar()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="salvar()">Salva</button>
+</mat-dialog-actions>
