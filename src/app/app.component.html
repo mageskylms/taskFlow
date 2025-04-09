@@ -10,9 +10,10 @@
             <mat-icon>feedback</mat-icon>
             <span>Enviar Feedback</span>
         </button>
-        <button mat-menu-item src="https://magesky.vercel.app">
+        <a mat-menu-item href="https://github.com/mageskylms/taskFlow" target="_blank" rel="noopener">
+            <mat-icon>code</mat-icon>
             <span>GITHUB</span>
-        </button>
+        </a>
     </mat-menu>
 
     <mat-button-toggle-group [value]="modoKanban" (change)="alternarModoKanban($event.value)" name="modo"
