@@ -4,6 +4,13 @@ TaskFlow é uma aplicação web desenvolvida em Angular para gerenciamento de ta
 
 Essa ferramenta faz parte do HUB de Ferramentas Diárias. [M8Sky](https://magesky.vercel.app)
 
+## Funcionalidades Principais
+
+- **Criação de Tarefas:** Adicione novas tarefas com facilidade, especificando títulos, descrições.
+- **Organização por Prioridade:** Baixa, alta e média
+- **Acompanhamento de Status:** Pendente ou Concluída.
+- **Interface Responsiva**
+
 > Projeto criado com [Angular CLI](https://github.com/angular/angular-cli) versão 19.1.5.
 
 ---
