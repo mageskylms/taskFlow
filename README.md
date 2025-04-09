@@ -6,10 +6,10 @@ Essa ferramenta faz parte do HUB de Ferramentas Diárias. [M8Sky](https://magesk
 
 ## Funcionalidades Principais
 
-- **Criação de Tarefas:** Adicione novas tarefas com facilidade, especificando títulos, descrições e prazos.&#8203;:contentReference[oaicite:0]{index=0}
-- **Organização por Categorias:** :contentReference[oaicite:1]{index=1}&#8203;:contentReference[oaicite:2]{index=2}
-- **Acompanhamento de Status:** :contentReference[oaicite:3]{index=3}&#8203;:contentReference[oaicite:4]{index=4}
-- **Interface Responsiva:** :contentReference[oaicite:5]{index=5}&#8203;:contentReference[oaicite:6]{index=6}
+- **Criação de Tarefas:** Adicione novas tarefas com facilidade, especificando títulos, descrições.
+- **Organização por Prioridade:** Baixa, alta e média
+- **Acompanhamento de Status:** Pendente ou Concluída.
+- **Interface Responsiva**
 
 > Projeto criado com [Angular CLI](https://github.com/angular/angular-cli) versão 19.1.5.
 
