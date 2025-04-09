@@ -91,12 +91,6 @@ export class DialogNovaTaskComponent {
       return false;
     }
 
-    if (!this.descricao.trim()) {
-      this.openDialog('Campo obrigatório', 'A descrição da tarefa é obrigatória.');
-      return false;
-    }
-
-
     return true;
   }
 
