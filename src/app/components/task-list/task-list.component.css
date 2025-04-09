@@ -1,24 +1,27 @@
 .nav {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    margin: 10px 0;
+    margin: 15px auto;
     gap: 30px;
-    width: 100%;
 }
 
 .lista-tarefas {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
-    min-width: 50vw;
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
 }
 
 mat-form-field {
-    width: 50%;
+    width: 10%;
     margin: 0 5px;
 }
 
@@ -93,4 +96,16 @@ li small {
 
 .concluidas {
     text-decoration: line-through;
+}
+
+@media screen and (max-width: 430px) {
+
+    mat-form-field {
+        width: 50%;
+    }
+
+    .lista-tarefas {
+        width: 100%;
+    }
+    
 }
