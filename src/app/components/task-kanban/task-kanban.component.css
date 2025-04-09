@@ -2,22 +2,26 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
-    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
     gap: 30px;
     min-width: 430px;
 }
 
 mat-form-field {
-    width: 50%;
+    width: 10%;
     margin: 0 5px;
 }
 
 button {
     background-color: #1976d2;
     color: #fff;
+    font-size: 0.7em;
     font-weight: bold;
     padding: 10px 20px;
+    max-width: 200px;
+    max-height: 40px;
     border-radius: 8px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -51,14 +55,23 @@ button:active {
     box-shadow: none;
 }
 
+.kanban {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .kanban-board {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 1rem;
 }
 
 .kanban-col {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 1rem;
     border-radius: 8px;
@@ -100,4 +113,11 @@ span {
     font-size: 0.8rem;
     color: #666;
     margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 430px) {
+    mat-form-field {
+        width: 50%;
+    }
+    
 }
